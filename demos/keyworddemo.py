@@ -7,7 +7,7 @@ speech_config = speechsdk.SpeechConfig(subscription=os.environ.get('SPEECH_KEY')
 
 # Creates an instance of a keyword recognition model. Update this to
 # point to the location of your keyword recognition model.
-model = speechsdk.KeywordRecognitionModel("ChatGPT.table")
+model = speechsdk.KeywordRecognitionModel("../ChatGPT.table")
 
 # The phrase your keyword recognition model triggers on.
 keyword = "ChatGPT"
