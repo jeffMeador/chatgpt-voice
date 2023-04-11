@@ -14,7 +14,7 @@ keyword = "ChatGPT"
 
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config)
 
-
+utterance = ""
 done = False
 
 def stop_cb(evt):
@@ -36,6 +36,8 @@ def recognized_cb(evt):
         print('RECOGNIZED KEYWORD: {}'.format(evt))
     elif evt.result.reason == speechsdk.ResultReason.RecognizedSpeech:
         print('RECOGNIZED: {}'.format(evt))
+        global utterance
+        utterance = evt.result.text
     elif evt.result.reason == speechsdk.ResultReason.NoMatch:
         print('NOMATCH: {}'.format(evt))
 
@@ -56,3 +58,5 @@ while not done:
     time.sleep(.5)
 
 speech_recognizer.stop_keyword_recognition()
+
+print(utterance)
