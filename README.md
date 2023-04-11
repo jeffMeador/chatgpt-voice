@@ -1,5 +1,22 @@
 # chatgpt-voice
 
+# Environment Setup
+
+## Windows
+
+```
+setx SPEECH_KEY your-key
+setx SPEECH_REGION your-region
+setx OPENAI_API_KEY your-openai-key
+```
+
+## Linux/macOS
+
+```
+export SPEECH_KEY=your-key 
+export SPEECH_REGION=your-region 
+export OPENAI_API_KEY=your-openai-key
+```
 
 # Helpful links
 
